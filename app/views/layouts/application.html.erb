@@ -50,7 +50,7 @@
           <a class="navbar-brand">
           </a>
           <ul class="nav navbar-nav">
-            <li><%=link_to image_tag("gdgfayoum.png", size: "120x120"), {:controller => 'access'}%> </li>
+            <li><%=link_to image_tag("gdgfayoum.png", size: "120x120"), {:controller => 'access', :action => 'index'}%> </li>
             <li style="padding-top: 45px; font-size: 16px;"><%= link_to "Events", {:controller => 'events', :action => 'index'}  %></li>
             <li style="padding-top: 45px; font-size: 16px;"><%= link_to "Members", {:controller => 'members', :action => 'index'}  %></li>
             <li style="padding-top: 45px; font-size: 16px;"><%= link_to "Home", {:controller => 'public', :action => 'index'}  %></li>
