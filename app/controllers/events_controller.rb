@@ -17,8 +17,12 @@ class EventsController < ApplicationController
 
   # GET /events/new
   def new
+    if Event.all.last.position.blank?
+      @event = Event.new
+    else
     last = Event.all.last!.position + 1
     @event = Event.new(:position => last )
+    end
   end
 
   # GET /events/1/edit
