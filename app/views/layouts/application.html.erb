@@ -74,12 +74,12 @@
         </div>
         <div class="col-lg-3">
           <div class="well sidebar-nav">
-            <h3>Sidebar</h3>
+            <h3>Public Area</h3>
             <ul class="nav nav-list">
-              <li><%= link_to "Brands", {:controller => 'brands', :action => 'index'}  %></li>
-              <li><%= link_to "Models", {:controller => 'models', :action => 'index'}  %></li>
-              <li><%= link_to "Cars", {:controller => 'cars', :action => 'index'}  %></li>
-              <li><%= link_to "Car Prices", {:controller => 'car_prices', :action => 'index'}  %></li>
+              <li><%= link_to "Home", {:controller => 'public', :action => 'home'}  %></li>
+              <li><%= link_to "Events", {:controller => 'public', :action => 'index'}  %></li>
+              <li><%= link_to "Contact Us", {:controller => 'public', :action => 'events'}  %></li>
+              <li><%= link_to "About Us", {:controller => 'public', :action => 'about_us'}  %></li>
 
             </ul>
           </div><!--/.well -->
