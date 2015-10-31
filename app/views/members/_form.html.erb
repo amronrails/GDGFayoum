@@ -58,25 +58,11 @@
     <%= error_span(@member[:avatar_file_name]) %>
   </div>
   <div class="control-group">
-    <%= f.label :avatar_content_type, :class => 'control-label' %>
+    <%= f.label :avatar, :class => 'control-label' %>
     <div class="controls">
-      <%= f.text_field :avatar_content_type, :class => 'form-control' %>
+      <%= f.file_field :avatar, :class => 'form-control' %>
     </div>
-    <%= error_span(@member[:avatar_content_type]) %>
-  </div>
-  <div class="control-group">
-    <%= f.label :avatar_file_size, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :avatar_file_size, :class => 'form-control' %>
-    </div>
-    <%= error_span(@member[:avatar_file_size]) %>
-  </div>
-  <div class="control-group">
-    <%= f.label :avatar_updated_at, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :avatar_updated_at, :class => 'form-control' %>
-    </div>
-    <%= error_span(@member[:avatar_updated_at]) %>
+    <%= error_span(@member[:avatar]) %>
   </div>
   <div class="control-group">
     <%= f.label :avatar2_file_name, :class => 'control-label' %>
@@ -86,25 +72,11 @@
     <%= error_span(@member[:avatar2_file_name]) %>
   </div>
   <div class="control-group">
-    <%= f.label :avatar2_content_type, :class => 'control-label' %>
+    <%= f.label :avatar2, :class => 'control-label' %>
     <div class="controls">
-      <%= f.text_field :avatar2_content_type, :class => 'form-control' %>
+      <%= f.file_field :avatar2, :class => 'form-control' %>
     </div>
-    <%= error_span(@member[:avatar2_content_type]) %>
-  </div>
-  <div class="control-group">
-    <%= f.label :avatar2_file_size, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :avatar2_file_size, :class => 'form-control' %>
-    </div>
-    <%= error_span(@member[:avatar2_file_size]) %>
-  </div>
-  <div class="control-group">
-    <%= f.label :avatar2_updated_at, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :avatar2_updated_at, :class => 'form-control' %>
-    </div>
-    <%= error_span(@member[:avatar2_updated_at]) %>
+    <%= error_span(@member[:avatar2]) %>
   </div>
 
 
