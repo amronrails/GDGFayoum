@@ -16,38 +16,13 @@
   <dd><%= @event.place %></dd>
   <dt><strong><%= model_class.human_attribute_name(:line2) %>:</strong></dt>
   <dd><%= @event.line2 %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:image_file_name) %>:</strong></dt>
-  <dd><%= @event.image_file_name %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:image_content_type) %>:</strong></dt>
-  <dd><%= @event.image_content_type %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:image_file_size) %>:</strong></dt>
-  <dd><%= @event.image_file_size %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:image_updated_at) %>:</strong></dt>
-  <dd><%= @event.image_updated_at %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:image2_file_name) %>:</strong></dt>
-  <dd><%= @event.image2_file_name %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:image2_content_type) %>:</strong></dt>
-  <dd><%= @event.image2_content_type %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:image2_file_size) %>:</strong></dt>
-  <dd><%= @event.image2_file_size %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:image2_updated_at) %>:</strong></dt>
-  <dd><%= @event.image2_updated_at %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:image3_file_name) %>:</strong></dt>
-  <dd><%= @event.image3_file_name %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:image3_content_type) %>:</strong></dt>
-  <dd><%= @event.image3_content_type %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:image3_file_size) %>:</strong></dt>
-  <dd><%= @event.image3_file_size %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:image3_updated_at) %>:</strong></dt>
-  <dd><%= @event.image3_updated_at %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:image4_file_name) %>:</strong></dt>
-  <dd><%= @event.image4_file_name %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:image4_content_type) %>:</strong></dt>
-  <dd><%= @event.image4_content_type %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:image4_file_size) %>:</strong></dt>
-  <dd><%= @event.image4_file_size %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:image4_updated_at) %>:</strong></dt>
-  <dd><%= @event.image4_updated_at %></dd>
+  <dt><strong><%= model_class.human_attribute_name("Images") %>:</strong></dt>
+  <dd>
+  <%= image_tag @event.image.url(:medium) %><br>
+  <% unless @event.image2.blank? %><%= image_tag @event.image2.url(:medium) %><% end%><br>
+  <% unless @event.image3.blank? %><%= image_tag @event.image3.url(:medium) %><% end%><br>
+  <% unless @event.image4.blank? %><%= image_tag @event.image4.url(:medium) %><% end%>
+  </dd>
 </dl>
 
 <%= link_to t('.back', :default => t("helpers.links.back")),
