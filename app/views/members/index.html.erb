@@ -5,9 +5,8 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <th><%= model_class.human_attribute_name(:id) %></th>
-      <th><%= model_class.human_attribute_name(:name) %></th>
       <th><%= model_class.human_attribute_name(:position) %></th>
+      <th><%= model_class.human_attribute_name(:name) %></th>
       <th><%= model_class.human_attribute_name(:job_title) %></th>
       <th><%= model_class.human_attribute_name(:line2) %></th>
       <th><%= model_class.human_attribute_name(:created_at) %></th>
@@ -17,7 +16,7 @@
   <tbody>
     <% @members.each do |member| %>
       <tr>
-        <td><%= link_to member.id, member_path(member) %></td>
+        <td><%= link_to member.position, member_path(member) %></td>
         <td><%= member.name %></td>
         <td><%= member.position %></td>
         <td><%= member.job_title %></td>
