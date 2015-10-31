@@ -1,5 +1,4 @@
 class PublicController < ApplicationController
-	layout 'application'
 
   def home
 
@@ -28,7 +27,7 @@ class PublicController < ApplicationController
   #####DEVELOPMENT#####
 
   def submit
-  	
+
   end
 
 end

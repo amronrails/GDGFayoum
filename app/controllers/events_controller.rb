@@ -1,7 +1,5 @@
 class EventsController < ApplicationController
 
-    layout 'admin'
-
   before_action :set_event, only: [:show, :edit, :update, :destroy]
   before_action :confirm_login
   # GET /events
@@ -19,7 +17,8 @@ class EventsController < ApplicationController
 
   # GET /events/new
   def new
-    @event = Event.new
+    last = Event.all.last!.position + 1
+    @event = Event.new(:position => last )
   end
 
   # GET /events/1/edit

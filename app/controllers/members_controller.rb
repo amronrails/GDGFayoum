@@ -1,7 +1,5 @@
 class MembersController < ApplicationController
 
-    layout 'admin'
-
   before_action :set_member, only: [:show, :edit, :update, :destroy]
   before_action :confirm_login
 

@@ -1,6 +1,5 @@
 class AccessController < ApplicationController
 
-	layout 'admin'
 
 	  before_action :confirm_login, :except => [:login , :attempt_login]
 

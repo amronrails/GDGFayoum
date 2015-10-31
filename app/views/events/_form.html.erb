@@ -1,41 +1,124 @@
-<%= form_for(@event) do |f| %>
-  <% if @event.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@event.errors.count, "error") %> prohibited this event from being saved:</h2>
+<%= form_for @event, :html => { :class => "form-horizontal event" } do |f| %>
 
-      <ul>
-      <% @event.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+    <% if @event.errors.any? %>
+    <div id="error_expl" class="panel panel-danger">
+      <div class="panel-heading">
+        <h3 class="panel-title"><%= pluralize(@event.errors.count, "error") %> prohibited this event from being saved:</h3>
+      </div>
+      <div class="panel-body">
+        <ul>
+        <% @event.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
+  <div class="control-group">
+    <%= f.label :name, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :name, :class => 'form-control' %>
+    </div>
+    <%= error_span(@event[:name]) %>
   </div>
-  <div class="field">
-    <%= f.label :position %><br>
-    <%= f.text_field :position %>
+  <div class="control-group">
+    <%= f.label :position, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :position, :class => 'form-control' %>
+    </div>
+    <%= error_span(@event[:position]) %>
   </div>
-  <div class="field">
-    <%= f.label :time %><br>
-    <%= f.datetime_select :time %>
+  <div class="control-group">
+    <%= f.label :time, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.datetime_select :time, :class => 'form-control' %>
+    </div>
+    <%= error_span(@event[:time]) %>
   </div>
-  <div class="field">
-    <%= f.label :details %><br>
-    <%= f.text_area :details, :rows => 7  %>
+  <div class="control-group">
+    <%= f.label :details, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_area :details, :rows => 5 , :class => 'form-control' %>
+    </div>
+    <%= error_span(@event[:details]) %>
   </div>
-  <div class="field">
-    <%= f.label :place %><br>
-    <%= f.text_field :place %>
+  <div class="control-group">
+    <%= f.label :place, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :place, :class => 'form-control' %>
+    </div>
+    <%= error_span(@event[:place]) %>
   </div>
-  <div class="field">
-    <%= f.label :line2 %><br>
-    <%= f.text_field :line2 %>
+  <div class="control-group">
+    <%= f.label :line2, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :line2, :class => 'form-control' %>
+    </div>
+    <%= error_span(@event[:line2]) %>
   </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="control-group">
+    <%= f.label :image_file_name, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :image_file_name, :class => 'form-control' %>
+    </div>
+    <%= error_span(@event[:image_file_name]) %>
   </div>
+  <div class="control-group">
+    <%= f.label :image, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.file_field :image, :class => 'form-control' %>
+    </div>
+    <%= error_span(@event[:image]) %>
+  </div>
+
+  <div class="control-group">
+    <%= f.label :image2_file_name, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :image2_file_name, :class => 'form-control' %>
+    </div>
+    <%= error_span(@event[:image2_file_name]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :image2, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.file_field :image2, :class => 'form-control' %>
+    </div>
+    <%= error_span(@event[:image2]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :image3_file_name, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :image3_file_name, :class => 'form-control' %>
+    </div>
+    <%= error_span(@event[:image3_file_name]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :image3, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.file_field :image3, :class => 'form-control' %>
+    </div>
+    <%= error_span(@event[:image3]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :image4_file_name, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :image4_file_name, :class => 'form-control' %>
+    </div>
+    <%= error_span(@event[:image4_file_name]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :image4, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.file_field :image4, :class => 'form-control' %>
+    </div>
+    <%= error_span(@event[:image4]) %>
+  </div>
+
+<br>
+
+  <%= f.submit nil, :class => 'btn btn-primary' %>
+  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+            events_path, :class => 'btn btn-default' %>
+
 <% end %>
