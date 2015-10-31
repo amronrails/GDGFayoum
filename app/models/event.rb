@@ -7,6 +7,8 @@ class Event < ActiveRecord::Base
 	has_attached_file :image3, styles: { medium: "300x300>", thumb: "50x50#" }, default_url: "/images/:style/missing.png"
 	has_attached_file :image4, styles: { medium: "300x300>", thumb: "50x50#" }, default_url: "/images/:style/missing.png"
 
+	scope :sorted, lambda{order("events.time DESC")}
+
 	#validation
 	validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
 	validates_attachment_content_type :image2, content_type: /\Aimage\/.*\Z/

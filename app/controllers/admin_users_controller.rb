@@ -6,7 +6,7 @@ class AdminUsersController < ApplicationController
   # GET /admin_users
   # GET /admin_users.json
   def index
-    @admin_users = AdminUser.all
+    @admin_users = AdminUser.all.sorted
   end
 
   # GET /admin_users/1
