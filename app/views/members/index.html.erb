@@ -10,15 +10,6 @@
       <th><%= model_class.human_attribute_name(:position) %></th>
       <th><%= model_class.human_attribute_name(:job_title) %></th>
       <th><%= model_class.human_attribute_name(:line2) %></th>
-      <th><%= model_class.human_attribute_name(:description) %></th>
-      <th><%= model_class.human_attribute_name(:avatar_file_name) %></th>
-      <th><%= model_class.human_attribute_name(:avatar_content_type) %></th>
-      <th><%= model_class.human_attribute_name(:avatar_file_size) %></th>
-      <th><%= model_class.human_attribute_name(:avatar_updated_at) %></th>
-      <th><%= model_class.human_attribute_name(:avatar2_file_name) %></th>
-      <th><%= model_class.human_attribute_name(:avatar2_content_type) %></th>
-      <th><%= model_class.human_attribute_name(:avatar2_file_size) %></th>
-      <th><%= model_class.human_attribute_name(:avatar2_updated_at) %></th>
       <th><%= model_class.human_attribute_name(:created_at) %></th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
@@ -32,14 +23,6 @@
         <td><%= member.job_title %></td>
         <td><%= member.line2 %></td>
         <td><%= member.description %></td>
-        <td><%= member.avatar_file_name %></td>
-        <td><%= member.avatar_content_type %></td>
-        <td><%= member.avatar_file_size %></td>
-        <td><%= member.avatar_updated_at %></td>
-        <td><%= member.avatar2_file_name %></td>
-        <td><%= member.avatar2_content_type %></td>
-        <td><%= member.avatar2_file_size %></td>
-        <td><%= member.avatar2_updated_at %></td>
         <td><%=l member.created_at %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
