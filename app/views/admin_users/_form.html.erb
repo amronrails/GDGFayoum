@@ -23,9 +23,9 @@
     <%= error_span(@admin_user[:username]) %>
   </div>
   <div class="control-group">
-    <%= f.label :password_digest, :class => 'control-label' %>
+    <%= f.label :password, :class => 'control-label' %>
     <div class="controls">
-      <%= f.text_field :password_digest, :class => 'form-control' %>
+      <%= f.password_field :password, :class => 'form-control' %>
     </div>
     <%= error_span(@admin_user[:password_digest]) %>
   </div>
@@ -51,28 +51,15 @@
     <%= error_span(@admin_user[:avatar_file_name]) %>
   </div>
   <div class="control-group">
-    <%= f.label :avatar_content_type, :class => 'control-label' %>
+    <%= f.label :avatar, :class => 'control-label' %>
     <div class="controls">
-      <%= f.text_field :avatar_content_type, :class => 'form-control' %>
+      <%= f.file_field :avatar, :class => 'form-control' %>
     </div>
-    <%= error_span(@admin_user[:avatar_content_type]) %>
-  </div>
-  <div class="control-group">
-    <%= f.label :avatar_file_size, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :avatar_file_size, :class => 'form-control' %>
-    </div>
-    <%= error_span(@admin_user[:avatar_file_size]) %>
-  </div>
-  <div class="control-group">
-    <%= f.label :avatar_updated_at, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :avatar_updated_at, :class => 'form-control' %>
-    </div>
-    <%= error_span(@admin_user[:avatar_updated_at]) %>
+    <%= error_span(@admin_user[:avatar]) %>
   </div>
 
 
+<br>
   <%= f.submit nil, :class => 'btn btn-primary' %>
   <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
             admin_users_path, :class => 'btn btn-default' %>

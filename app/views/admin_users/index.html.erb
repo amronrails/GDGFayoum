@@ -6,15 +6,10 @@
   <thead>
     <tr>
       <th><%= model_class.human_attribute_name(:id) %></th>
+      <th><%= model_class.human_attribute_name(:avatar_file_name) %></th>
       <th><%= model_class.human_attribute_name(:username) %></th>
-      <th><%= model_class.human_attribute_name(:password_digest) %></th>
       <th><%= model_class.human_attribute_name(:adminstrator) %></th>
       <th><%= model_class.human_attribute_name(:email) %></th>
-      <th><%= model_class.human_attribute_name(:avatar_file_name) %></th>
-      <th><%= model_class.human_attribute_name(:avatar_content_type) %></th>
-      <th><%= model_class.human_attribute_name(:avatar_file_size) %></th>
-      <th><%= model_class.human_attribute_name(:avatar_updated_at) %></th>
-      <th><%= model_class.human_attribute_name(:created_at) %></th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
@@ -22,15 +17,10 @@
     <% @admin_users.each do |admin_user| %>
       <tr>
         <td><%= link_to admin_user.id, admin_user_path(admin_user) %></td>
+        <td><%= image_tag admin_user.avatar.url(:thumb) %></td>
         <td><%= admin_user.username %></td>
-        <td><%= admin_user.password_digest %></td>
         <td><%= admin_user.adminstrator %></td>
         <td><%= admin_user.email %></td>
-        <td><%= admin_user.avatar_file_name %></td>
-        <td><%= admin_user.avatar_content_type %></td>
-        <td><%= admin_user.avatar_file_size %></td>
-        <td><%= admin_user.avatar_updated_at %></td>
-        <td><%=l admin_user.created_at %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
                       edit_admin_user_path(admin_user), :class => 'btn btn-default btn-xs' %>

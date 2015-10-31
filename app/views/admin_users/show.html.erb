@@ -4,10 +4,10 @@
 </div>
 
 <dl class="dl-horizontal">
+  <dt><strong><%= model_class.human_attribute_name(:id) %>:</strong></dt>
+  <dd><%= @admin_user.id %></dd>
   <dt><strong><%= model_class.human_attribute_name(:username) %>:</strong></dt>
   <dd><%= @admin_user.username %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:password_digest) %>:</strong></dt>
-  <dd><%= @admin_user.password_digest %></dd>
   <dt><strong><%= model_class.human_attribute_name(:adminstrator) %>:</strong></dt>
   <dd><%= @admin_user.adminstrator %></dd>
   <dt><strong><%= model_class.human_attribute_name(:email) %>:</strong></dt>
