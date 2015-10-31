@@ -1,7 +1,6 @@
 class AdminUsersController < ApplicationController
 
-    layout 'admin'
-
+  before_action :confirm_login
   before_action :set_admin_user, only: [:show, :edit, :update, :destroy]
 
   # GET /admin_users
