@@ -51,4 +51,4 @@ production:
   <<: *default
   database: gdgfayoum_production
   username: gdgfayoum
-  password: <%= ENV['GDGFAYOUM_DATABASE_PASSWORD'] %>
+  password: <%= ENV['CYLINDER_DATABASE_PASSWORD'] %>
