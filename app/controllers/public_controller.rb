@@ -3,7 +3,7 @@ class PublicController < ApplicationController
   layout 'public'
 
   def home
-
+    
   end
 
   def about_us
