@@ -26,9 +26,6 @@ class PublicController < ApplicationController
 
   end
 
-  def mario
-    
-  end
 
 
   #####DEVELOPMENT#####
