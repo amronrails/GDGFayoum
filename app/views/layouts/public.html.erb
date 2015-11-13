@@ -1,17 +1,272 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Gdgfayoum</title>
-  <%= stylesheet_link_tag "application", :media => "all" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-<p id="notice"><%= notice %></p>
-<%if session[:user_id]%>
-<%= link_to "logout", {:controller => 'access', :action => 'logout'} %>
-<% end %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>
+            GDG - Home
+        </title>
+    	<%= stylesheet_link_tag "public", :media => "all" %>
+		<meta charset="utf-8">
+  		<meta name="viewport" content="width=device-width, initial-scale=1">
+  		<%= stylesheet_link_tag "http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"%>
+        <%= stylesheet_link_tag "https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css"%>
+  		<%= javascript_include_tag "https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"%>
+  		<%= javascript_include_tag "http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"%>
+    </head>
+    
+    <body>
+    <!--=======================================All Header=======================================-->
+<!--small header-->
+        <div id="wrapper">
+			<div id="tfheader">
+				<form id="tfnewsearch" method="get" action="http://www.google.com">
+				<input type="text" class="tftextinput" name="q" size="41" maxlength="120"placeholder="what do you want to search on our website ?">
+				<input type="submit" value="search" class="tfbutton">
+				</form>
+				<div class="tfclear">
+				</div><!--tfclear-->
+			</div><!--tfheader-->
+			<div class="logo">
+				<img src="images/GDG-logo-header.png" height="60" width="190"/>   
+    		</div><!--logo-->
+		</div>
+        <section style="background-image:url(images/header-background.png); background-repeat:no-repeat; background-size:contain; background-size:100% 350px; height:315px;">
+        
+            <table >
+                <tr >
+                    <td >
+                      <a href="#" id="we">
+                	    <img src="images/home.png" id="home_pic" data-toggle="tooltip" title="Home" style="width:70px;height:60px;">
+				      </a>
+                    </td>
+                    <td>
+                        <a href="#">
+					     <img src="images/team.png" id="team_pic" data-toggle="tooltip" title="Team">
+				       </a> 
+                    </td>
+                    <td>
+				        <a href="#">
+                          <img src="images/event.png" id="events_pic" data-toggle="tooltip" title="Events">
+				       </a>
+                    </td> 
+                </tr>
+    
+                <tr >
+                    <td>
+                      <a href="#">
+					    <img src="images/about us.png" id="about_pic" data-toggle="tooltip" title="About us">
+				     </a>
+                    </td>
+                    <td>
+                       <img src="images/centerlogo.png" id="google_header" style="width:350px;height:150px; ">
+                    </td>
+                    <td>
+                       <a href="#">
+				         <img src="images/contact us.png" id="contact_pic" data-toggle="tooltip" title="Contact us">
+				      </a>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td>
+                        <a href="#">
+					      <img src="images/about google.png" id="google_pic" data-toggle="tooltip" title="About Google">
+				       </a>
+                    </td>
+                    <td>
+                        <a href="#">
+					      <img src="images/technology.png" id="techn_pic" data-toggle="tooltip" title="Technology" >
+				        </a> 
+                    </td>
+                    <td>
+                        <a href="#">
+					      <img src="images/calender.ico" id="cale_pic" data-toggle="tooltip" title="Calendar">
+				        </a>
+                    </td>
+                </tr>
+                
+            </table>
+        
+        </section>
+<!--big header-->
+<!--=======================================All Header=======================================-->
+<!--///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<!--=======================================Social Left======================================-->
+<!-- social html -->
 
-<%= yield %>
 
-</body>
+<div style="height:0px; background-color:#ccccff;">
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,200' rel='stylesheet' type='text/css'> 
+    <nav class="social">
+        <ul>      
+            <li>
+            	<a href="https://www.facebook.com" target="_blank">Facebook <i class="fa fa-facebook">
+                	<img src="images/fb.png" height="40" width="40" />
+                </a>
+            </li>
+            <li>
+            	<a href="https://plus.google.com" target="_blank">Google + <i class="fa fa-google+">
+                	<img src="images/googleplus.png" height="40" width="40" />
+                </a>
+            </li>
+            <li>
+                <a href="https://www.youtube.com" target="_blank">Youtube <i class="fa fa-youtube">
+                	<img src="images/youtube-left.png" height="40" width="40"  />
+                </a>
+            </li>
+            <li>
+                <a href="https://www.twitter.com" target="_blank">Twitter <i class="fa fa-twitter">
+                	<img src="images/glossy-black-new-twitter-bird-square.png" height="40" width="40" />
+                </a>
+            </li>
+            <li>
+                <a href="https://www.istgram.com" target="_blank">Instgram <i class="fa fa-instgram">
+                	<img src="images/instagram - left.png" height="40" width="40" />
+                </a>
+            </li>                               
+        </ul>
+    </nav>
+</div>
+<!--=======================================Social Left======================================-->
+<!--///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<!--=======================================All footer=======================================-->
+<!--Large Footer-->
+<div id="footer" >
+<!--Date and time-->
+<div id="date-time">
+<!--DateFun-->
+	<SCRIPT LANGUAGE="JavaScript1.2">
+        var months=new Array(13);
+        months[1]="Jan";
+        months[2]="Feb";
+        months[3]="Mar";
+        months[4]="Apr";
+        months[5]="May";
+        months[6]="Jun";
+        months[7]="Jul";
+        months[8]="Aug";
+        months[9]="Sep";
+        months[10]="Oct";
+        months[11]="Nov";
+        months[12]="Dec";
+        var time=new Date();
+        var lmonth=months[time.getMonth() + 1];
+        var date=time.getDate();
+        var year=time.getYear();
+        if (year < 2000)    
+        year = year + 1900; 
+        document.write("<center>" + date + "  ");
+        document.write(lmonth + "  " + year + "</center>");
+    </SCRIPT>
+<!--DateFun-->
+<!--TimeFun-->
+    <div align="center">
+        <table>
+            <script>
+                function getthedate(){
+                var mydate=new Date()
+                var daym=mydate.getDate()
+                if (daym<10)
+                daym="0"+daym
+                var hours=mydate.getHours()
+                var minutes=mydate.getMinutes()
+                var seconds=mydate.getSeconds()
+                var dn="H:i"
+                if (hours>=12)
+                dn="PM"
+                if (hours>12){
+                hours=hours-12
+                }
+                if (hours==0)
+                hours=12
+                if (minutes<=9)
+                minutes="0"+minutes
+                if (seconds<=9)
+                seconds="0"+seconds
+                var cdate="<big><font color='#FFF' face='MS Sans Serif'>"+hours+":"+minutes+":"+seconds+"</font></big>"
+                if (document.all)
+                document.all.clock.innerHTML=cdate
+                else if (document.getElementById)
+                document.getElementById("clock").innerHTML=cdate
+                else
+                document.write(cdate)
+                }
+                if (!document.all&&!document.getElementById)
+                getthedate()
+                function goforit(){
+                if (document.all||document.getElementById)
+                setInterval("getthedate()",1000)
+                }
+            </script>
+            <span id="clock"><body  rightmargin="0" leftmargin="0" topmargin="0" marginwidth="0"  onLoad="goforit()"></span>
+        </table>
+    </div>
+<!--TimeFun-->
+</div>
+<!--Date and time-->
+    <img src="images/gdg fayoum 2.png" style="float:right; width:300px; height:300px; margin-top:50px; margin-right:50px;" />
+    <div id="inf-large-footer" style="margin-left:30px;">
+    
+        <div id="inf-facebook" style="width:250px; height:150px;  float:left; padding:10px; ">
+        	<span style="font-weight:bold; font-size:20px; color:#FF0;">Facebook</span>
+        	<p style="color:#FFF;">Make like to our page on and <br /> you can send us some mess- <br /> age and wait our responding <br /> in 1 or 3 days.</p>
+        </div><!--inf-large-footer-->
+        
+        <div id="inf-Google+" style="width:250px; height:150px; float:left; padding:10px;">
+        	<span style="font-weight:bold; font-size:20px; color:#FF0;">Google+</span>
+        	<p style="color:#FFF;">Make account on Google+ and <br /> visit our account to see what n- <br />ew on google.</p>
+        </div><!--inf-Google+-->
+        
+        <div id="inf-twitter" style="width:250px; height:150px; float:left; padding:10px;">
+        	<span style="font-weight:bold; font-size:20px; color:#FF0;">Twitter</span>
+        	<p style="color:#FFF;">You can visit out account on <br /> twitter and see out Tweets.</p>
+        </div><!--inf-twitter-->
+        
+        <div id="inf-youtube" style="width:250px; height:150px; float:left; padding:10px;">
+        	<span style="font-weight:bold; font-size:20px; color:#FF0;">Youtube</span>
+        	<p style="color:#FFF;">If you want to follow us and our videos for our events visit our c- <br /> hannel on youtube.</p>
+        </div><!--inf-youtube-->
+        
+    </div>
+</div>
+<!--Large Footer-->
+<!--Small Footer-->
+<div id="smallfooter">
+    <span style="float:left; font-size:16px; font-weight:bold; color:#fff; margin-left:10px; margin-top:17px;">&copy; Edit by GDG Fayoum members "Amr Essam (Leader), Mario Emad, Sally Ahmed, Gehad Ahmed".</span>
+    <ul class="nav navbar-nav">
+		<script>
+        $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip();   
+        });
+        </script>
+        <li>
+            <a href="https://www.facebook.com/GDG-Fayoum-697217413726281/timeline/" data-toggle="tooltip" title="Facebook" target="_blank" style="padding:7px;">
+            	<img src="images/fb.png" style="width:42px; height:41px;"/>
+            </a>
+        </li>
+        <li>
+            <a href="https://plus.google.com" data-toggle="tooltip" title="Google plus" target="_blank" style="padding:10px;">
+            	<img src="images/googleplus.png" style="width:32px; height:35px;"/>
+            </a>
+        </li>
+        <li>
+            <a href="https://www.youtube.com" data-toggle="tooltip" title="Youtube"  target="_blank" style="padding:8px;">
+            	<img src="images/you-tube2-s-webtreatsetc.png" style="width:45px; height:40px;"/>
+            </a>
+        </li>
+        <li>
+            <a href="https://www.twitter.com" data-toggle="tooltip" title="Twitter" target="_blank" style="padding:8px;">
+            	<img src="images/glossy-black-new-twitter-bird-square.png" style="width:40px; height:40px;"/>
+            </a>
+        </li>
+        <li>
+            <a href="https://instagram.com" data-toggle="tooltip" title="Instgram" target="_blank" style="padding:12px;">
+            	<img src="images/instagram.png" style="width:30px; height:32px;" />
+            </a>
+        </li>
+    </ul>
+</div>
+<!--Small Footer-->
+<!--=======================================All footer=======================================-->
+    </body>
 </html>

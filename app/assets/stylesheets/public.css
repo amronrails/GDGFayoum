@@ -186,8 +186,8 @@
 section
 {
  
-    //background-image:url(images/header-background.png);
-    background-image: url(images/header-background.png);
+    //background-image:url(/assets/header-background.png);
+    background-image: url(/assets/header-background.png);
     background-repeat:no-repeat;
     background-size:contain;
     background-size:100% 350px;
@@ -363,7 +363,7 @@ a{
 /*----------------------------------------big Footer----------------------------------------*/
 #footer{
 	
-	background-image:url(images/GDG-bg-footer7.png);
+	background-image:url(/assets/GDG-bg-footer7.png);
 	background-position:center;
 	background-size:cover;
 	width:100%;
@@ -408,3 +408,4 @@ a{
 }
 /*----------------------------------------Small Footer----------------------------------------*/
 /*=====================Footer=====================*/
+
