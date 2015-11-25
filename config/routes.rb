@@ -9,6 +9,10 @@ Rails.application.routes.draw do
 
   get 'public/contact_us'
 
+  get 'public/home'
+
+  get 'public/events'
+
   get 'public', :to => 'public#home'
 
 

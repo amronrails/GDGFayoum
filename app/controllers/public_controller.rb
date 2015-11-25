@@ -1,6 +1,6 @@
 class PublicController < ApplicationController
 
-  layout 'public'
+  layout 'application'
 
   def home
     
